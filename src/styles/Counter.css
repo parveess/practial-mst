@@ -1,0 +1,142 @@
+/**
+ * Counter Component Styles
+ * 
+ * This file contains all styling for the Counter component
+ * Includes layout, colors, and responsive design
+ */
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  padding: 20px;
+}
+
+/* Main heading */
+.counter-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+}
+
+/* Counter display box */
+.counter-display {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px 50px;
+  margin: 20px 0;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Large counter value display */
+.counter-value {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  min-width: 150px;
+  text-align: center;
+}
+
+/* Button container */
+.button-group {
+  display: flex;
+  gap: 20px;
+  margin: 30px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Base button styling */
+.btn {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  min-width: 140px;
+}
+
+/* Increment button styling (green) */
+.btn-increase {
+  background: linear-gradient(135deg, #00d084 0%, #00a55f 100%);
+  color: white;
+}
+
+.btn-increase:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 208, 132, 0.4);
+}
+
+.btn-increase:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0, 208, 132, 0.4);
+}
+
+/* Decrement button styling (red) */
+.btn-decrease {
+  background: linear-gradient(135deg, #ff6b6b 0%, #c92a2a 100%);
+  color: white;
+}
+
+.btn-decrease:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+.btn-decrease:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(255, 107, 107, 0.4);
+}
+
+/* Counter status text */
+.counter-status {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  opacity: 0.9;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .counter-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .counter-display {
+    padding: 20px 30px;
+  }
+
+  .counter-value {
+    font-size: 3rem;
+    min-width: 120px;
+  }
+
+  .button-group {
+    gap: 15px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    min-width: 120px;
+  }
+
+  .counter-status {
+    font-size: 1rem;
+  }
+}
